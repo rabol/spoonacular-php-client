@@ -83,7 +83,10 @@ class SearchRecipes200ResponseResultsInner implements ModelInterface, ArrayAcces
         'credits_text' => 'string',
         'license' => 'string',
         'source_name' => 'string',
-        'price_per_serving' => 'float'
+        'price_per_serving' => 'float',
+        'ready_in_minutes' => 'int',
+        'summary' => 'string',
+        'cuisines' => 'object'
     ];
 
     /**
@@ -119,7 +122,10 @@ class SearchRecipes200ResponseResultsInner implements ModelInterface, ArrayAcces
         'credits_text' => null,
         'license' => null,
         'source_name' => null,
-        'price_per_serving' => null
+        'price_per_serving' => null,
+        'ready_in_minutes' => null,
+        'summary' => null,
+        'cuisines' => null
     ];
 
     /**
@@ -153,7 +159,10 @@ class SearchRecipes200ResponseResultsInner implements ModelInterface, ArrayAcces
         'credits_text' => false,
         'license' => false,
         'source_name' => false,
-        'price_per_serving' => false
+        'price_per_serving' => false,
+        'ready_in_minutes' => false,
+        'summary' => false,
+        'cuisines' => false
     ];
 
     /**
@@ -267,7 +276,10 @@ class SearchRecipes200ResponseResultsInner implements ModelInterface, ArrayAcces
         'credits_text' => 'creditsText',
         'license' => 'license',
         'source_name' => 'sourceName',
-        'price_per_serving' => 'pricePerServing'
+        'price_per_serving' => 'pricePerServing',
+        'ready_in_minutes' => 'readyInMinutes',
+        'summary' => 'summary',
+        'cuisines' => 'cuisines'
     ];
 
     /**
@@ -301,7 +313,10 @@ class SearchRecipes200ResponseResultsInner implements ModelInterface, ArrayAcces
         'credits_text' => 'setCreditsText',
         'license' => 'setLicense',
         'source_name' => 'setSourceName',
-        'price_per_serving' => 'setPricePerServing'
+        'price_per_serving' => 'setPricePerServing',
+        'ready_in_minutes' => 'setReadyInMinutes',
+        'summary' => 'setSummary',
+        'cuisines' => 'setCuisines'
     ];
 
     /**
@@ -335,7 +350,10 @@ class SearchRecipes200ResponseResultsInner implements ModelInterface, ArrayAcces
         'credits_text' => 'getCreditsText',
         'license' => 'getLicense',
         'source_name' => 'getSourceName',
-        'price_per_serving' => 'getPricePerServing'
+        'price_per_serving' => 'getPricePerServing',
+        'ready_in_minutes' => 'getReadyInMinutes',
+        'summary' => 'getSummary',
+        'cuisines' => 'getCuisines'
     ];
 
     /**
@@ -421,6 +439,9 @@ class SearchRecipes200ResponseResultsInner implements ModelInterface, ArrayAcces
         $this->setIfExists('license', $data ?? [], null);
         $this->setIfExists('source_name', $data ?? [], null);
         $this->setIfExists('price_per_serving', $data ?? [], null);
+        $this->setIfExists('ready_in_minutes', $data ?? [], null);
+        $this->setIfExists('summary', $data ?? [], null);
+        $this->setIfExists('cuisines', $data ?? [], null);
     }
 
     /**
@@ -1226,6 +1247,87 @@ class SearchRecipes200ResponseResultsInner implements ModelInterface, ArrayAcces
             throw new \InvalidArgumentException('non-nullable price_per_serving cannot be null');
         }
         $this->container['price_per_serving'] = $price_per_serving;
+
+        return $this;
+    }
+
+    /**
+     * Gets ready_in_minutes
+     *
+     * @return int|null
+     */
+    public function getReadyInMinutes()
+    {
+        return $this->container['ready_in_minutes'];
+    }
+
+    /**
+     * Sets ready_in_minutes
+     *
+     * @param int|null $ready_in_minutes ready_in_minutes
+     *
+     * @return self
+     */
+    public function setReadyInMinutes($ready_in_minutes)
+    {
+        if (is_null($ready_in_minutes)) {
+            throw new \InvalidArgumentException('non-nullable ready_in_minutes cannot be null');
+        }
+        $this->container['ready_in_minutes'] = $ready_in_minutes;
+
+        return $this;
+    }
+
+    /**
+     * Gets summary
+     *
+     * @return string|null
+     */
+    public function getSummary()
+    {
+        return $this->container['summary'];
+    }
+
+    /**
+     * Sets summary
+     *
+     * @param string|null $summary summary
+     *
+     * @return self
+     */
+    public function setSummary($summary)
+    {
+        if (is_null($summary)) {
+            throw new \InvalidArgumentException('non-nullable summary cannot be null');
+        }
+        $this->container['summary'] = $summary;
+
+        return $this;
+    }
+
+    /**
+     * Gets cuisines
+     *
+     * @return object|null
+     */
+    public function getCuisines()
+    {
+        return $this->container['cuisines'];
+    }
+
+    /**
+     * Sets cuisines
+     *
+     * @param object|null $cuisines cuisines
+     *
+     * @return self
+     */
+    public function setCuisines($cuisines)
+    {
+        if (is_null($cuisines)) {
+            throw new \InvalidArgumentException('non-nullable cuisines cannot be null');
+        }
+        $this->container['cuisines'] = $cuisines;
 
         return $this;
     }
