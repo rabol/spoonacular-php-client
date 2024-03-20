@@ -86,7 +86,20 @@ class SearchRecipes200ResponseResultsInner implements ModelInterface, ArrayAcces
         'price_per_serving' => 'float',
         'ready_in_minutes' => 'int',
         'summary' => 'string',
-        'cuisines' => 'object'
+        'cuisines' => 'object',
+        'dish_types' => 'object',
+        'diets' => 'object',
+        'occasions' => 'object',
+        'analyzed_instructions' => 'object',
+        'spoonacular_score' => 'float',
+        'spoonacular_source_url' => 'string',
+        'extended_ingredients' => 'object',
+        'used_ingredient_count' => 'int',
+        'missed_ingredient_count' => 'int',
+        'missed_ingredients' => 'object',
+        'likes' => 'int',
+        'used_ingredients' => 'object',
+        'unused_ingredients' => 'object'
     ];
 
     /**
@@ -125,7 +138,20 @@ class SearchRecipes200ResponseResultsInner implements ModelInterface, ArrayAcces
         'price_per_serving' => null,
         'ready_in_minutes' => null,
         'summary' => null,
-        'cuisines' => null
+        'cuisines' => null,
+        'dish_types' => null,
+        'diets' => null,
+        'occasions' => null,
+        'analyzed_instructions' => null,
+        'spoonacular_score' => null,
+        'spoonacular_source_url' => null,
+        'extended_ingredients' => null,
+        'used_ingredient_count' => null,
+        'missed_ingredient_count' => null,
+        'missed_ingredients' => null,
+        'likes' => null,
+        'used_ingredients' => null,
+        'unused_ingredients' => null
     ];
 
     /**
@@ -162,7 +188,20 @@ class SearchRecipes200ResponseResultsInner implements ModelInterface, ArrayAcces
         'price_per_serving' => false,
         'ready_in_minutes' => false,
         'summary' => false,
-        'cuisines' => false
+        'cuisines' => false,
+        'dish_types' => false,
+        'diets' => false,
+        'occasions' => false,
+        'analyzed_instructions' => false,
+        'spoonacular_score' => false,
+        'spoonacular_source_url' => false,
+        'extended_ingredients' => false,
+        'used_ingredient_count' => false,
+        'missed_ingredient_count' => false,
+        'missed_ingredients' => false,
+        'likes' => false,
+        'used_ingredients' => false,
+        'unused_ingredients' => false
     ];
 
     /**
@@ -279,7 +318,20 @@ class SearchRecipes200ResponseResultsInner implements ModelInterface, ArrayAcces
         'price_per_serving' => 'pricePerServing',
         'ready_in_minutes' => 'readyInMinutes',
         'summary' => 'summary',
-        'cuisines' => 'cuisines'
+        'cuisines' => 'cuisines',
+        'dish_types' => 'dishTypes',
+        'diets' => 'diets',
+        'occasions' => 'occasions',
+        'analyzed_instructions' => 'analyzedInstructions',
+        'spoonacular_score' => 'spoonacularScore',
+        'spoonacular_source_url' => 'spoonacularSourceUrl',
+        'extended_ingredients' => 'extendedIngredients',
+        'used_ingredient_count' => 'usedIngredientCount',
+        'missed_ingredient_count' => 'missedIngredientCount',
+        'missed_ingredients' => 'missedIngredients',
+        'likes' => 'likes',
+        'used_ingredients' => 'usedIngredients',
+        'unused_ingredients' => 'unusedIngredients'
     ];
 
     /**
@@ -316,7 +368,20 @@ class SearchRecipes200ResponseResultsInner implements ModelInterface, ArrayAcces
         'price_per_serving' => 'setPricePerServing',
         'ready_in_minutes' => 'setReadyInMinutes',
         'summary' => 'setSummary',
-        'cuisines' => 'setCuisines'
+        'cuisines' => 'setCuisines',
+        'dish_types' => 'setDishTypes',
+        'diets' => 'setDiets',
+        'occasions' => 'setOccasions',
+        'analyzed_instructions' => 'setAnalyzedInstructions',
+        'spoonacular_score' => 'setSpoonacularScore',
+        'spoonacular_source_url' => 'setSpoonacularSourceUrl',
+        'extended_ingredients' => 'setExtendedIngredients',
+        'used_ingredient_count' => 'setUsedIngredientCount',
+        'missed_ingredient_count' => 'setMissedIngredientCount',
+        'missed_ingredients' => 'setMissedIngredients',
+        'likes' => 'setLikes',
+        'used_ingredients' => 'setUsedIngredients',
+        'unused_ingredients' => 'setUnusedIngredients'
     ];
 
     /**
@@ -353,7 +418,20 @@ class SearchRecipes200ResponseResultsInner implements ModelInterface, ArrayAcces
         'price_per_serving' => 'getPricePerServing',
         'ready_in_minutes' => 'getReadyInMinutes',
         'summary' => 'getSummary',
-        'cuisines' => 'getCuisines'
+        'cuisines' => 'getCuisines',
+        'dish_types' => 'getDishTypes',
+        'diets' => 'getDiets',
+        'occasions' => 'getOccasions',
+        'analyzed_instructions' => 'getAnalyzedInstructions',
+        'spoonacular_score' => 'getSpoonacularScore',
+        'spoonacular_source_url' => 'getSpoonacularSourceUrl',
+        'extended_ingredients' => 'getExtendedIngredients',
+        'used_ingredient_count' => 'getUsedIngredientCount',
+        'missed_ingredient_count' => 'getMissedIngredientCount',
+        'missed_ingredients' => 'getMissedIngredients',
+        'likes' => 'getLikes',
+        'used_ingredients' => 'getUsedIngredients',
+        'unused_ingredients' => 'getUnusedIngredients'
     ];
 
     /**
@@ -442,6 +520,19 @@ class SearchRecipes200ResponseResultsInner implements ModelInterface, ArrayAcces
         $this->setIfExists('ready_in_minutes', $data ?? [], null);
         $this->setIfExists('summary', $data ?? [], null);
         $this->setIfExists('cuisines', $data ?? [], null);
+        $this->setIfExists('dish_types', $data ?? [], null);
+        $this->setIfExists('diets', $data ?? [], null);
+        $this->setIfExists('occasions', $data ?? [], null);
+        $this->setIfExists('analyzed_instructions', $data ?? [], null);
+        $this->setIfExists('spoonacular_score', $data ?? [], null);
+        $this->setIfExists('spoonacular_source_url', $data ?? [], null);
+        $this->setIfExists('extended_ingredients', $data ?? [], null);
+        $this->setIfExists('used_ingredient_count', $data ?? [], null);
+        $this->setIfExists('missed_ingredient_count', $data ?? [], null);
+        $this->setIfExists('missed_ingredients', $data ?? [], null);
+        $this->setIfExists('likes', $data ?? [], null);
+        $this->setIfExists('used_ingredients', $data ?? [], null);
+        $this->setIfExists('unused_ingredients', $data ?? [], null);
     }
 
     /**
@@ -1328,6 +1419,357 @@ class SearchRecipes200ResponseResultsInner implements ModelInterface, ArrayAcces
             throw new \InvalidArgumentException('non-nullable cuisines cannot be null');
         }
         $this->container['cuisines'] = $cuisines;
+
+        return $this;
+    }
+
+    /**
+     * Gets dish_types
+     *
+     * @return object|null
+     */
+    public function getDishTypes()
+    {
+        return $this->container['dish_types'];
+    }
+
+    /**
+     * Sets dish_types
+     *
+     * @param object|null $dish_types dish_types
+     *
+     * @return self
+     */
+    public function setDishTypes($dish_types)
+    {
+        if (is_null($dish_types)) {
+            throw new \InvalidArgumentException('non-nullable dish_types cannot be null');
+        }
+        $this->container['dish_types'] = $dish_types;
+
+        return $this;
+    }
+
+    /**
+     * Gets diets
+     *
+     * @return object|null
+     */
+    public function getDiets()
+    {
+        return $this->container['diets'];
+    }
+
+    /**
+     * Sets diets
+     *
+     * @param object|null $diets diets
+     *
+     * @return self
+     */
+    public function setDiets($diets)
+    {
+        if (is_null($diets)) {
+            throw new \InvalidArgumentException('non-nullable diets cannot be null');
+        }
+        $this->container['diets'] = $diets;
+
+        return $this;
+    }
+
+    /**
+     * Gets occasions
+     *
+     * @return object|null
+     */
+    public function getOccasions()
+    {
+        return $this->container['occasions'];
+    }
+
+    /**
+     * Sets occasions
+     *
+     * @param object|null $occasions occasions
+     *
+     * @return self
+     */
+    public function setOccasions($occasions)
+    {
+        if (is_null($occasions)) {
+            throw new \InvalidArgumentException('non-nullable occasions cannot be null');
+        }
+        $this->container['occasions'] = $occasions;
+
+        return $this;
+    }
+
+    /**
+     * Gets analyzed_instructions
+     *
+     * @return object|null
+     */
+    public function getAnalyzedInstructions()
+    {
+        return $this->container['analyzed_instructions'];
+    }
+
+    /**
+     * Sets analyzed_instructions
+     *
+     * @param object|null $analyzed_instructions analyzed_instructions
+     *
+     * @return self
+     */
+    public function setAnalyzedInstructions($analyzed_instructions)
+    {
+        if (is_null($analyzed_instructions)) {
+            throw new \InvalidArgumentException('non-nullable analyzed_instructions cannot be null');
+        }
+        $this->container['analyzed_instructions'] = $analyzed_instructions;
+
+        return $this;
+    }
+
+    /**
+     * Gets spoonacular_score
+     *
+     * @return float|null
+     */
+    public function getSpoonacularScore()
+    {
+        return $this->container['spoonacular_score'];
+    }
+
+    /**
+     * Sets spoonacular_score
+     *
+     * @param float|null $spoonacular_score spoonacular_score
+     *
+     * @return self
+     */
+    public function setSpoonacularScore($spoonacular_score)
+    {
+        if (is_null($spoonacular_score)) {
+            throw new \InvalidArgumentException('non-nullable spoonacular_score cannot be null');
+        }
+        $this->container['spoonacular_score'] = $spoonacular_score;
+
+        return $this;
+    }
+
+    /**
+     * Gets spoonacular_source_url
+     *
+     * @return string|null
+     */
+    public function getSpoonacularSourceUrl()
+    {
+        return $this->container['spoonacular_source_url'];
+    }
+
+    /**
+     * Sets spoonacular_source_url
+     *
+     * @param string|null $spoonacular_source_url spoonacular_source_url
+     *
+     * @return self
+     */
+    public function setSpoonacularSourceUrl($spoonacular_source_url)
+    {
+        if (is_null($spoonacular_source_url)) {
+            throw new \InvalidArgumentException('non-nullable spoonacular_source_url cannot be null');
+        }
+        $this->container['spoonacular_source_url'] = $spoonacular_source_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets extended_ingredients
+     *
+     * @return object|null
+     */
+    public function getExtendedIngredients()
+    {
+        return $this->container['extended_ingredients'];
+    }
+
+    /**
+     * Sets extended_ingredients
+     *
+     * @param object|null $extended_ingredients extended_ingredients
+     *
+     * @return self
+     */
+    public function setExtendedIngredients($extended_ingredients)
+    {
+        if (is_null($extended_ingredients)) {
+            throw new \InvalidArgumentException('non-nullable extended_ingredients cannot be null');
+        }
+        $this->container['extended_ingredients'] = $extended_ingredients;
+
+        return $this;
+    }
+
+    /**
+     * Gets used_ingredient_count
+     *
+     * @return int|null
+     */
+    public function getUsedIngredientCount()
+    {
+        return $this->container['used_ingredient_count'];
+    }
+
+    /**
+     * Sets used_ingredient_count
+     *
+     * @param int|null $used_ingredient_count used_ingredient_count
+     *
+     * @return self
+     */
+    public function setUsedIngredientCount($used_ingredient_count)
+    {
+        if (is_null($used_ingredient_count)) {
+            throw new \InvalidArgumentException('non-nullable used_ingredient_count cannot be null');
+        }
+        $this->container['used_ingredient_count'] = $used_ingredient_count;
+
+        return $this;
+    }
+
+    /**
+     * Gets missed_ingredient_count
+     *
+     * @return int|null
+     */
+    public function getMissedIngredientCount()
+    {
+        return $this->container['missed_ingredient_count'];
+    }
+
+    /**
+     * Sets missed_ingredient_count
+     *
+     * @param int|null $missed_ingredient_count missed_ingredient_count
+     *
+     * @return self
+     */
+    public function setMissedIngredientCount($missed_ingredient_count)
+    {
+        if (is_null($missed_ingredient_count)) {
+            throw new \InvalidArgumentException('non-nullable missed_ingredient_count cannot be null');
+        }
+        $this->container['missed_ingredient_count'] = $missed_ingredient_count;
+
+        return $this;
+    }
+
+    /**
+     * Gets missed_ingredients
+     *
+     * @return object|null
+     */
+    public function getMissedIngredients()
+    {
+        return $this->container['missed_ingredients'];
+    }
+
+    /**
+     * Sets missed_ingredients
+     *
+     * @param object|null $missed_ingredients missed_ingredients
+     *
+     * @return self
+     */
+    public function setMissedIngredients($missed_ingredients)
+    {
+        if (is_null($missed_ingredients)) {
+            throw new \InvalidArgumentException('non-nullable missed_ingredients cannot be null');
+        }
+        $this->container['missed_ingredients'] = $missed_ingredients;
+
+        return $this;
+    }
+
+    /**
+     * Gets likes
+     *
+     * @return int|null
+     */
+    public function getLikes()
+    {
+        return $this->container['likes'];
+    }
+
+    /**
+     * Sets likes
+     *
+     * @param int|null $likes likes
+     *
+     * @return self
+     */
+    public function setLikes($likes)
+    {
+        if (is_null($likes)) {
+            throw new \InvalidArgumentException('non-nullable likes cannot be null');
+        }
+        $this->container['likes'] = $likes;
+
+        return $this;
+    }
+
+    /**
+     * Gets used_ingredients
+     *
+     * @return object|null
+     */
+    public function getUsedIngredients()
+    {
+        return $this->container['used_ingredients'];
+    }
+
+    /**
+     * Sets used_ingredients
+     *
+     * @param object|null $used_ingredients used_ingredients
+     *
+     * @return self
+     */
+    public function setUsedIngredients($used_ingredients)
+    {
+        if (is_null($used_ingredients)) {
+            throw new \InvalidArgumentException('non-nullable used_ingredients cannot be null');
+        }
+        $this->container['used_ingredients'] = $used_ingredients;
+
+        return $this;
+    }
+
+    /**
+     * Gets unused_ingredients
+     *
+     * @return object|null
+     */
+    public function getUnusedIngredients()
+    {
+        return $this->container['unused_ingredients'];
+    }
+
+    /**
+     * Sets unused_ingredients
+     *
+     * @param object|null $unused_ingredients unused_ingredients
+     *
+     * @return self
+     */
+    public function setUnusedIngredients($unused_ingredients)
+    {
+        if (is_null($unused_ingredients)) {
+            throw new \InvalidArgumentException('non-nullable unused_ingredients cannot be null');
+        }
+        $this->container['unused_ingredients'] = $unused_ingredients;
 
         return $this;
     }
