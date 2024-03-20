@@ -77,7 +77,13 @@ class SearchRecipes200ResponseResultsInner implements ModelInterface, ArrayAcces
         'source_url' => 'string',
         'low_fodmap' => 'bool',
         'gaps' => 'string',
-        'preparation_minutes' => 'int'
+        'preparation_minutes' => 'int',
+        'aggregate_likes' => 'int',
+        'health_score' => 'int',
+        'credits_text' => 'string',
+        'license' => 'string',
+        'source_name' => 'string',
+        'price_per_serving' => 'float'
     ];
 
     /**
@@ -107,7 +113,13 @@ class SearchRecipes200ResponseResultsInner implements ModelInterface, ArrayAcces
         'source_url' => null,
         'low_fodmap' => null,
         'gaps' => null,
-        'preparation_minutes' => null
+        'preparation_minutes' => null,
+        'aggregate_likes' => null,
+        'health_score' => null,
+        'credits_text' => null,
+        'license' => null,
+        'source_name' => null,
+        'price_per_serving' => null
     ];
 
     /**
@@ -135,7 +147,13 @@ class SearchRecipes200ResponseResultsInner implements ModelInterface, ArrayAcces
         'source_url' => false,
         'low_fodmap' => false,
         'gaps' => false,
-        'preparation_minutes' => false
+        'preparation_minutes' => false,
+        'aggregate_likes' => false,
+        'health_score' => false,
+        'credits_text' => false,
+        'license' => false,
+        'source_name' => false,
+        'price_per_serving' => false
     ];
 
     /**
@@ -243,7 +261,13 @@ class SearchRecipes200ResponseResultsInner implements ModelInterface, ArrayAcces
         'source_url' => 'sourceUrl',
         'low_fodmap' => 'lowFodmap',
         'gaps' => 'gaps',
-        'preparation_minutes' => 'preparationMinutes'
+        'preparation_minutes' => 'preparationMinutes',
+        'aggregate_likes' => 'aggregateLikes',
+        'health_score' => 'healthScore',
+        'credits_text' => 'creditsText',
+        'license' => 'license',
+        'source_name' => 'sourceName',
+        'price_per_serving' => 'pricePerServing'
     ];
 
     /**
@@ -271,7 +295,13 @@ class SearchRecipes200ResponseResultsInner implements ModelInterface, ArrayAcces
         'source_url' => 'setSourceUrl',
         'low_fodmap' => 'setLowFodmap',
         'gaps' => 'setGaps',
-        'preparation_minutes' => 'setPreparationMinutes'
+        'preparation_minutes' => 'setPreparationMinutes',
+        'aggregate_likes' => 'setAggregateLikes',
+        'health_score' => 'setHealthScore',
+        'credits_text' => 'setCreditsText',
+        'license' => 'setLicense',
+        'source_name' => 'setSourceName',
+        'price_per_serving' => 'setPricePerServing'
     ];
 
     /**
@@ -299,7 +329,13 @@ class SearchRecipes200ResponseResultsInner implements ModelInterface, ArrayAcces
         'source_url' => 'getSourceUrl',
         'low_fodmap' => 'getLowFodmap',
         'gaps' => 'getGaps',
-        'preparation_minutes' => 'getPreparationMinutes'
+        'preparation_minutes' => 'getPreparationMinutes',
+        'aggregate_likes' => 'getAggregateLikes',
+        'health_score' => 'getHealthScore',
+        'credits_text' => 'getCreditsText',
+        'license' => 'getLicense',
+        'source_name' => 'getSourceName',
+        'price_per_serving' => 'getPricePerServing'
     ];
 
     /**
@@ -379,6 +415,12 @@ class SearchRecipes200ResponseResultsInner implements ModelInterface, ArrayAcces
         $this->setIfExists('low_fodmap', $data ?? [], null);
         $this->setIfExists('gaps', $data ?? [], null);
         $this->setIfExists('preparation_minutes', $data ?? [], null);
+        $this->setIfExists('aggregate_likes', $data ?? [], null);
+        $this->setIfExists('health_score', $data ?? [], null);
+        $this->setIfExists('credits_text', $data ?? [], null);
+        $this->setIfExists('license', $data ?? [], null);
+        $this->setIfExists('source_name', $data ?? [], null);
+        $this->setIfExists('price_per_serving', $data ?? [], null);
     }
 
     /**
@@ -1022,6 +1064,168 @@ class SearchRecipes200ResponseResultsInner implements ModelInterface, ArrayAcces
             throw new \InvalidArgumentException('non-nullable preparation_minutes cannot be null');
         }
         $this->container['preparation_minutes'] = $preparation_minutes;
+
+        return $this;
+    }
+
+    /**
+     * Gets aggregate_likes
+     *
+     * @return int|null
+     */
+    public function getAggregateLikes()
+    {
+        return $this->container['aggregate_likes'];
+    }
+
+    /**
+     * Sets aggregate_likes
+     *
+     * @param int|null $aggregate_likes aggregate_likes
+     *
+     * @return self
+     */
+    public function setAggregateLikes($aggregate_likes)
+    {
+        if (is_null($aggregate_likes)) {
+            throw new \InvalidArgumentException('non-nullable aggregate_likes cannot be null');
+        }
+        $this->container['aggregate_likes'] = $aggregate_likes;
+
+        return $this;
+    }
+
+    /**
+     * Gets health_score
+     *
+     * @return int|null
+     */
+    public function getHealthScore()
+    {
+        return $this->container['health_score'];
+    }
+
+    /**
+     * Sets health_score
+     *
+     * @param int|null $health_score health_score
+     *
+     * @return self
+     */
+    public function setHealthScore($health_score)
+    {
+        if (is_null($health_score)) {
+            throw new \InvalidArgumentException('non-nullable health_score cannot be null');
+        }
+        $this->container['health_score'] = $health_score;
+
+        return $this;
+    }
+
+    /**
+     * Gets credits_text
+     *
+     * @return string|null
+     */
+    public function getCreditsText()
+    {
+        return $this->container['credits_text'];
+    }
+
+    /**
+     * Sets credits_text
+     *
+     * @param string|null $credits_text credits_text
+     *
+     * @return self
+     */
+    public function setCreditsText($credits_text)
+    {
+        if (is_null($credits_text)) {
+            throw new \InvalidArgumentException('non-nullable credits_text cannot be null');
+        }
+        $this->container['credits_text'] = $credits_text;
+
+        return $this;
+    }
+
+    /**
+     * Gets license
+     *
+     * @return string|null
+     */
+    public function getLicense()
+    {
+        return $this->container['license'];
+    }
+
+    /**
+     * Sets license
+     *
+     * @param string|null $license license
+     *
+     * @return self
+     */
+    public function setLicense($license)
+    {
+        if (is_null($license)) {
+            throw new \InvalidArgumentException('non-nullable license cannot be null');
+        }
+        $this->container['license'] = $license;
+
+        return $this;
+    }
+
+    /**
+     * Gets source_name
+     *
+     * @return string|null
+     */
+    public function getSourceName()
+    {
+        return $this->container['source_name'];
+    }
+
+    /**
+     * Sets source_name
+     *
+     * @param string|null $source_name source_name
+     *
+     * @return self
+     */
+    public function setSourceName($source_name)
+    {
+        if (is_null($source_name)) {
+            throw new \InvalidArgumentException('non-nullable source_name cannot be null');
+        }
+        $this->container['source_name'] = $source_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets price_per_serving
+     *
+     * @return float|null
+     */
+    public function getPricePerServing()
+    {
+        return $this->container['price_per_serving'];
+    }
+
+    /**
+     * Sets price_per_serving
+     *
+     * @param float|null $price_per_serving price_per_serving
+     *
+     * @return self
+     */
+    public function setPricePerServing($price_per_serving)
+    {
+        if (is_null($price_per_serving)) {
+            throw new \InvalidArgumentException('non-nullable price_per_serving cannot be null');
+        }
+        $this->container['price_per_serving'] = $price_per_serving;
 
         return $this;
     }
